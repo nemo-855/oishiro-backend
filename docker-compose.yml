@@ -10,10 +10,10 @@ services:
     image: mysql:8.0
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: jy@0Hyj3P1&r9&7ds9s
-      MYSQL_DATABASE: oishiro
-      MYSQL_USER: nemo
-      MYSQL_PASSWORD: masterDatabaseForOishiroApp
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
       - db_data:/var/lib/mysql
       - ./src/main/resources/sql/create-post-db.sql:/docker-entrypoint-initdb.d/1-create-post-db.sql

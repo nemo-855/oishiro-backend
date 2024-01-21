@@ -16,5 +16,7 @@ services:
       MYSQL_PASSWORD: masterDatabaseForOishiroApp
     volumes:
       - db_data:/var/lib/mysql
+      - ./src/main/resources/sql/create-post-db.sql:/docker-entrypoint-initdb.d/1-create-post-db.sql
+      - ./src/main/resources/sql/insert-init-value.sql:/docker-entrypoint-initdb.d/2-insert-init-value.sql
 volumes:
   db_data:

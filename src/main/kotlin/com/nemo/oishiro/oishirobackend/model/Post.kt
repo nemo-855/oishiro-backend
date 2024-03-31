@@ -9,7 +9,7 @@ data class Post(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Int,
     val deviceId: String,
-    val userId: Int,
+    val userId: String,
     val title: String,
     val body: String,
     val memo: String,

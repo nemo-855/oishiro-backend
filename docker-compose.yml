@@ -24,5 +24,6 @@ services:
       - db_data:/var/lib/mysql
       - ./src/main/resources/sql/create-post-db.sql:/docker-entrypoint-initdb.d/1-create-post-db.sql
       - ./src/main/resources/sql/insert-init-value.sql:/docker-entrypoint-initdb.d/2-insert-init-value.sql
+      - ./src/main/resources/sql/my.cnf:/etc/mysql/conf.d/my.cnf
 volumes:
   db_data:
